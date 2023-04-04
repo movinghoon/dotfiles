@@ -3,7 +3,7 @@
 ```
 apt-get update;
 apt-get install -y nodejs unzip zip wget zsh vim tmux curl git htop libgl1 libglib2.0-0 rsync; pip install gpustat opencv-python matplotlib einops scikit-image scikit-learn jupyter jupyterlab ipdb easydict seaborn tensorboard pytorch_lightning;
-git clone https://github.com/SeongwoongCho/dotfiles.git ~/.dotfiles; bash ~/.dotfiles/install.sh;
+git clone https://github.com/SeongwoongCho/dotfiles.git ~/.dotfiles; cd ~; bash ~/.dotfiles/install.sh;
 
 apt-get update;
 apt-get install -y software-properties-common curl;
