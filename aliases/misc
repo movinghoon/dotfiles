@@ -85,3 +85,9 @@ function howmany(){
         set -o glob
     fi
 }
+
+function pyclean(){
+    cmd="find . | grep -E "(/__pycache__$|\.pyc$|\.pyo$)" | xargs rm -rf"
+    echo $cmd
+    eval $cmd
+}
