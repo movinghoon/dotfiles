@@ -87,7 +87,7 @@ function howmany(){
 }
 
 function pyclean(){
-    cmd="find . | grep -E "(/__pycache__$|\.pyc$|\.pyo$|\.ipynb_checkpoints$)" | xargs rm -rf"
+    cmd="find . | grep -E '(/__pycache__$|\.pyc$|\.pyo$|\.ipynb_checkpoints$)' | xargs rm -rf"
     echo $cmd
     eval $cmd
 }
