@@ -26,7 +26,7 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
-" search
+" searchf
 set ignorecase              " case-insensitive by default
 set smartcase               " case-sensitive if keyword contains both uppercase and lowercase
 set incsearch	            " incremental search
@@ -91,8 +91,8 @@ set hidden                  " enable switching across buffers without saving.
 :vnoremap > >gv             " (")
 
 " ipdb
-:nnoremap <Leader>b Oimport ipdb; ipdb.set_trace(context=15)<Esc>
-:nnoremap <Leader>v oimport ipdb; ipdb.set_trace(context=15)<Esc>
+:nnoremap <Leader>b Oimport os; ipdb; ipdb.set_trace(context=15) if os.environ.get("LOCAL_RANK", 0) == 0 else None<Esc>
+:nnoremap <Leader>v oimport os; ipdb; ipdb.set_trace(context=15) if os.environ.get("LOCAL_RANK", 0) == 0 else None<Esc>
 
 
 " =============== plugins ============= "
